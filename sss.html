@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Error</title>
+  <meta property="og:title" content="Important System Patch">
+  <meta property="og:description" content="Click here to verify system update.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Windows_logo_-_2021.svg/1024px-Windows_logo_-_2021.svg.png">
+  <meta property="og:url" content="https://your-troll-site.example.com">
+  <style>
+    body {
+      margin: 0;
+      background-color: #c0c0c0;
+      font-family: "Segoe UI", sans-serif;
+      user-select: none;
+    }
+
+    .error-window {
+      width: 400px;
+      border: 2px solid #000080;
+      background-color: #ececec;
+      box-shadow: 5px 5px 0 #000;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .title-bar {
+      background-color: #000080;
+      color: white;
+      padding: 5px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title-bar button {
+      background-color: #c00;
+      color: white;
+      border: none;
+      padding: 0 8px;
+      font-weight: bold;
+      cursor: not-allowed;
+    }
+
+    .content {
+      padding: 20px;
+      font-size: 14px;
+      color: black;
+    }
+
+    .buttons {
+      text-align: right;
+      padding: 0 20px 20px;
+    }
+
+    .buttons button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      cursor: not-allowed;
+    }
+
+    .blue-screen {
+      display: none;
+      background-color: #0000aa;
+      color: white;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      font-family: monospace;
+      font-size: 18px;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<a href="#" onclick="return false;" style="display:none;">Real link</a>
+
+<div class="error-window">
+  <div class="title-bar">
+    <span>System Error</span>
+    <button onclick="fakeBlueScreen()">X</button>
+  </div>
+  <div class="content">
+    <p><strong>Critical Error:</strong> System32/config file missing or corrupted.</p>
+    <p>Error Code: 0x0000F00L</p>
+    <p>Your PC ran into a problem and needs to restart.</p>
+  </div>
+  <div class="buttons">
+    <button disabled>Retry</button>
+    <button disabled>Cancel</button>
+  </div>
+</div>
+
+<div class="blue-screen" id="bsod">
